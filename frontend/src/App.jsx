@@ -8,7 +8,7 @@ import PreRecorded from './pages/PreRecorded';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-black">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

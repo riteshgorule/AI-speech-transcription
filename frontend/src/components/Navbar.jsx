@@ -12,34 +12,33 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-black flex items-center justify-center">
-              <Mic2 className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold tracking-tight">SPEECHIFY</span>
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-3xl">
+      <div className="backdrop-blur-xl bg-black/40 border border-gray-800 rounded-full shadow-lg px-6 py-3 flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-emerald-500 flex items-center justify-center rounded-full">
+            <Mic2 className="w-5 h-5 text-black" />
           </div>
+          <span className="text-lg font-bold tracking-tight text-white">SPEECHIFY</span>
+        </div>
 
-          <div className="flex space-x-1">
-            {navItems.map(({ path, label, icon: Icon }) => (
-              <Link
-                key={path}
-                to={path}
-                className={`px-4 py-2 rounded-none text-sm font-medium transition-all duration-200 hover:bg-gray-100 ${
+        {/* Nav Links */}
+        <div className="flex space-x-2">
+          {navItems.map(({ path, label, icon: Icon }) => (
+            <Link
+              key={path}
+              to={path}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
+                ${
                   location.pathname === path
-                    ? 'bg-black text-white'
-                    : 'text-gray-700 hover:text-black'
+                    ? 'bg-emerald-500 text-black shadow-md'
+                    : 'text-gray-300 hover:text-white hover:bg-gray-800'
                 }`}
-              >
-                <div className="flex items-center space-x-2">
-                  <Icon className="w-4 h-4" />
-                  <span className="hidden sm:inline">{label}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
+            >
+              <Icon className="w-4 h-4" />
+              <span className="hidden sm:inline">{label}</span>
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
