@@ -84,7 +84,7 @@ const PreRecorded = () => {
       formData.append('target_language', targetLanguage);
       formData.append('enhance', 'false'); // Don't enhance automatically
 
-      const response = await fetch('http://localhost:5000/transcribe', {
+      const response = await fetch('https://ai-speech-transcription.onrender.com/transcribe', {
         method: 'POST',
         body: formData,
       });
@@ -130,7 +130,7 @@ const PreRecorded = () => {
     setIsEnhancing(true);
 
     try {
-      const response = await fetch('http://localhost:5000/process-live-text', {
+      const response = await fetch('https://ai-speech-transcription.onrender.com/process-live-text', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ const PreRecorded = () => {
     setIsTranslating(true);
 
     try {
-      const response = await fetch('http://localhost:5000/translate-text', {
+      const response = await fetch('https://ai-speech-transcription.onrender.com/translate-text', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
