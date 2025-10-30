@@ -14,7 +14,7 @@ import google.generativeai as genai
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": ["https://ai-speech-transcription.vercel.app/"]}})
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
