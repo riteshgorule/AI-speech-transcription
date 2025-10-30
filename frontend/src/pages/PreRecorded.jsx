@@ -252,7 +252,7 @@ const PreRecorded = () => {
   };
 
   return (
-  <div className="bg-black text-white min-h-screen pt-28">
+  <div className="text-white min-h-screen pt-28">
       <div className="max-w-6xl mx-auto px-6 py-10">
       {/* Header */}
       <div className="text-center mb-12">

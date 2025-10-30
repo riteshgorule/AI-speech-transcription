@@ -5,3 +5,22 @@
 body {
   font-family: 'Inter', sans-serif;
 }
+
+/* Full-app background grid layering */
+.global-dot-grid-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #000; /* keep solid black background */
+}
+
+.dot-grid-fixed-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 0; /* behind main content */
+  pointer-events: none; /* don't block clicks */
+}
+
+.main-page-content {
+  position: relative;
+  z-index: 1;
+}
