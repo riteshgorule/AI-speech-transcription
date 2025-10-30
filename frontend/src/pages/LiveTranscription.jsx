@@ -158,7 +158,7 @@ const LiveTranscription = () => {
     setIsTranslating(true);
 
     try {
-      const response = await fetch("http://localhost:5000/translate-text", {
+      const response = await fetch("https://ai-speech-transcription.onrender.com/translate-text", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -193,7 +193,7 @@ const LiveTranscription = () => {
     setIsProcessing(true);
 
     try {
-      const response = await fetch("http://localhost:5000/process-live-text", {
+      const response = await fetch("https://ai-speech-transcription.onrender.com/process-live-text", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
